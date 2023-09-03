@@ -1,42 +1,10 @@
-# Nitro Minimal Starter
+# `datamall-proxy`
 
-Look at the [Nitro documentation](https://nitro.unjs.io/) to learn more.
+Simple proxy to LTA's DataMall service. 
 
-## Setup
+Created because DataMall does not support TLS, which makes it troublesome to use in Cloudflare Workers.
 
-Make sure to install the dependencies:
+## Deployments
 
-```bash
-# npm
-npm install
-
-# yarn
-yarn install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on <http://localhost:3000>
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nitro.unjs.io/deploy) for more information.
+1. <https://datamall-proxy.netlify.app>
+2. <https://datamall-proxy.vercel.app>
