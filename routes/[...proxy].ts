@@ -34,7 +34,7 @@ export default eventHandler((event) => {
   if (!jsonPaths.includes(event.context.params.proxy))
     return proxyRequest(event, `http://datamall2.mytransport.sg${event.path}`)
 
-  const camel = 'camel' in getQuery(event)
+  const camel = false
 
   return fetchWithEvent(event, `http://datamall2.mytransport.sg${event.path}`)
     .then(async (response: FetchResponse<{}>) => {
