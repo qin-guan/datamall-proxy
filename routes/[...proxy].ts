@@ -34,11 +34,9 @@ export default eventHandler((event) => {
   if (!jsonPaths.includes(event.context.params.proxy))
     return proxyRequest(event, `http://datamall2.mytransport.sg${event.path}`)
 
-  const camel = false
-
   return fetchWithEvent(event, `http://datamall2.mytransport.sg${event.path}`)
     .then(async (response: FetchResponse<{}>) => {
-      if (response.ok && camel) {
+      if (response.ok) {
         return new Response(JSON.stringify(toCamel(await response.json())), response)
       }
       return response
